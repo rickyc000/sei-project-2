@@ -1,9 +1,26 @@
 import React from 'react'
 
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import Header from './components/common/Header'
+import Home from './components/common/Home'
+import TrackShow from './components/tracks/TrackShow'
+
+
 function App() {
-  return <h1>Hello World</h1>
-<p>hello</p>
-  console.log(process.env.REACT_APP_MY_API_KEY)
+
+
+
+  
+  return (
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/TrackShow" component={TrackShow} />
+      </Switch>
+    </BrowserRouter>
+  )
 
 }
 
