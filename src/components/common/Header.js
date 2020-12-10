@@ -1,9 +1,11 @@
 import React from 'react'
+import logo from '../../assets/logo.png'
 
 function Header() {
   return (
     <section>
-      <img src='././src/assets/gorillaz-logo.png' alt='Gorillaz'/>
+      <img src={ logo } />
+
     </section>
   )
 }
