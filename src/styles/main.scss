@@ -16,6 +16,11 @@
 // Colour variants:
 $colour1: #ffbbbb;
 $colour2: #c9cdff;
+$colour3: #5C5D8D;
+
+
+
+
 
 // Header Logo Styling (section > wrapper > img)
 
@@ -27,7 +32,8 @@ $colour2: #c9cdff;
 
 .logo-wrapper {
   border: 7px solid black;
-  box-shadow: 0px 0px 8px #000000;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px $colour3;
   margin: 15px;
   background: radial-gradient($colour1, $colour2)
 }
@@ -36,6 +42,10 @@ $colour2: #c9cdff;
   width: 280px;
   margin: 0px 7px;
 }
+
+
+
+
 
 
 
@@ -50,7 +60,8 @@ $colour2: #c9cdff;
 
 .enter-wrapper {
   border: 7px solid black;
-  box-shadow: 0px 0px 8px #000000;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px $colour3;
   background: radial-gradient($colour2, $colour1);
 
   display: flex;
@@ -59,6 +70,8 @@ $colour2: #c9cdff;
 
   margin: 15px;
   height: 120px;
+
+  animation: shake 1.5s infinite;
 }
 
 .enter {
@@ -66,4 +79,11 @@ $colour2: #c9cdff;
   font-family: 'Gorillaz';
   padding: 5px;
   margin: 0px 7px;
+}
+
+
+@keyframes shake {
+  0% {transform: translate(0px, 0px);}
+  50% {transform: translate(0px, 8px);}
+  100% {transform: translate(0px, 0px);}
 }
