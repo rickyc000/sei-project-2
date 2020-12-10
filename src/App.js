@@ -11,13 +11,12 @@ function App() {
 
 
 
-  
   return (
     <BrowserRouter>
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/TrackShow" component={TrackShow} />
+        <Route path="/trackshow" component={TrackShow} />
       </Switch>
     </BrowserRouter>
   )

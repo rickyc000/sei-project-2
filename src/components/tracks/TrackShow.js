@@ -6,7 +6,7 @@ import ReactAudioPlayer from 'react-audio-player'
 
 function TrackShow() {
   const [tracks, setTracks] = React.useState(null)
-  const [trackIndex, setTrackIndex] = React.useState(Math.floor(Math.random() * 50))
+  const [trackIndex, setTrackIndex] = React.useState(Math.floor(Math.random() * 200))
 
   React.useEffect(() => {
     const getData = async () => {
@@ -29,7 +29,7 @@ function TrackShow() {
   const currentAudioSource = tracks && tracks.results[trackIndex].previewUrl
 
   function nextTrack() {  
-    setTrackIndex(Math.floor(Math.random() * 50))
+    setTrackIndex(Math.floor(Math.random() * 200))
   }
 
 
@@ -46,10 +46,10 @@ function TrackShow() {
             <ReactAudioPlayer
               src={currentAudioSource}
               autoPlay
-              controls
+              // controls
             />
             <audio></audio>
-            <button onClick={nextTrack}>test</button>
+            <button onClick={nextTrack}>Next</button>
           </div>
           :
           <p>...loading</p>
