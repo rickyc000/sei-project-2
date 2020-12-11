@@ -19,7 +19,7 @@ figure {
 .audio-player {
   background-color: white;
 }
-.gorillaz-logo {
+.gorillaz-trackshow-logo {
   max-height: 400px;
   max-width: 600px;
 }
@@ -27,6 +27,23 @@ span {
   font-family: 'Gorillaz';
   font-size: 30px;
 }
+
+// ASH CODE FRIDAY MORNING
+
+
+.rotate {
+  animation: rotation 8s infinite linear;
+  border: 5px solid white;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 
 // RICKY NEW CODE SINCE 10PM 
 
@@ -58,14 +75,59 @@ main {
   animation: shake 1.5s infinite;
 }
 
+// BAND IMAGES STYLING:
+
+.band-images-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
 .characterOne img {
   height: 420px;
   position: absolute;
-  right: 150px;
+  right: 5%;
   bottom: 0;
   opacity: 1;
   animation: fade 1.5s linear;
 }
+
+.characterTwo img {
+  height: 320px;
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  opacity: 1;
+  animation: fade 2.5s linear;
+}
+
+.murdocImage img {
+  height: 520px;
+  position: absolute;
+  left: 2%;
+  bottom: 0;
+  opacity: 1;
+  animation: fade 2s linear;
+}
+
+.jeep {
+  // height: 300px;
+  // width: 100vh;
+  // right: 50%; 
+  // top: 30%;
+  opacity: 1;
+  // animation: fadeIn 6s linear;
+}
+
+.jeep img {
+  height: 400px;
+  position: absolute;
+  // left: 35%;
+  top: 35%;
+  opacity: 1;
+  animation: drive 6.5s linear;
+}
+
 
 // Loading page
 
@@ -84,9 +146,9 @@ main {
 }
 
 .band-image-container img {
-  height: 700px;
+  height: 600px;
   opacity: 1;
-  animation: fadeInOut 1.6s infinite;
+  animation: fadeInOut 6.5s linear;
 }
 
 // Welcome text:
@@ -95,23 +157,40 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  text-align: center;
+  margin: 10px;
   // animation: fade 1.5s linear;
 }
-
-
-
-
 
 @keyframes fade {
   0% { opacity: 0 }
   100% { opacity: 1 }
 }
 
+@keyframes drive {
+  0% { left: -40% }
+  80% { left: 0% }
+  100% { left: 100% }
+}
+
 @keyframes fadeInOut {
   0% { opacity: 0.3 }
+  10% { opacity: 1 }
+  20% { opacity: 0.4 }
+  30% { opacity: 1 }
+  40% { opacity: 0.4 }
+  50% { opacity: 1 }
+  60% { opacity: 0.4 }
   70% { opacity: 1 }
-  100% { opacity: 0.3 }
+  80% { opacity: 0.2 }
+  100% { opacity: 0 }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0}
+  90% { opacity: 0 }
+  95% { opacity: 1 }
+  100% { opacity: 1 }
 }
 
 @keyframes shake {

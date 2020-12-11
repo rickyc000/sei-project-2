@@ -4,7 +4,7 @@ import { getTracks } from '../lib/api'
 import ReactAudioPlayer from 'react-audio-player'
 function TrackShow() {
   const [tracks, setTracks] = React.useState(null)
-  const [trackIndex, setTrackIndex] = React.useState(Math.floor(Math.random() * 200))
+  const [trackIndex, setTrackIndex] = React.useState(Math.floor(Math.random() * 199 + 1))
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -22,20 +22,21 @@ function TrackShow() {
   const currentArtwork = tracks && tracks.results[trackIndex].artworkUrl100.replace(/100x100/g, '600x600')
   const currentAudioSource = tracks && tracks.results[trackIndex].previewUrl
   function nextTrack() {  
-    setTrackIndex(Math.floor(Math.random() * 200))
+    setTrackIndex(Math.floor(Math.random() * 199 + 1))
   }
+
   return (
     <body className="trackshow-page">
       <section className="hero is-fullheight">
         <div className="has-text-centered">
-          <img className="gorillaz-logo" src="https://preview.redd.it/ufq2moe3zhz11.png?width=2024&format=png&auto=webp&s=74460feb542c2e3861cfc11a2213cf9cc3ab2b3b"></img>
+          <img className="gorillaz-trackshow-logo" src="https://preview.redd.it/ufq2moe3zhz11.png?width=2024&format=png&auto=webp&s=74460feb542c2e3861cfc11a2213cf9cc3ab2b3b"></img>
         </div>
         <div className="container">
           {tracks ?
             <div>
               <div className="has-text-centered">
-                <figure className="image is-400x400">
-                  <img src={currentArtwork} alt={currentCollectionName}/>
+                <figure className="image is-400x400 has-text-centered">
+                  <img className="rotate" src={currentArtwork} alt={currentCollectionName}/>
                 </figure>
                 <h2 className="is-family-code m-5">Track name: {currentTrackName}</h2>
                 <h2 className="is-family-code">Album name: {currentCollectionName}</h2>

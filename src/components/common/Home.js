@@ -1,7 +1,13 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import characterOne from '../../assets/2d.png'
+import characterTwo from '../../assets/2d-image2.png'
+import murdocImage from '../../assets/murdoc.png'
+import jeep from '../../assets/jeep.png'
+
+
 import bandLoadingImage from '../../assets/gorillaz-band.png'
+
 
 function Home() {
   const history = useHistory()
@@ -10,17 +16,11 @@ function Home() {
   const clicksEnter = () => {
     setEnteredSite(true)
 
-
-
-
     //* This then sends the user to the TRACK SHOW page:
     setTimeout(() => {
       history.push('/trackshow')
-    }, 4000)
+    }, 6500)
   }
-
-
-
 
   return (
     <main className="home-page">
@@ -44,12 +44,24 @@ function Home() {
               <span>Enter</span>
             </button>
           </div>
-          <div className="characterOne">
-            <img src={characterOne} alt="gorillaz" />
+          <div className="band-images-wrapper">
+            <div className="characterOne">
+              <img src={characterOne} alt="gorillaz" />
+            </div>
+            <div className="characterTwo">
+              <img src={characterTwo} alt="gorillaz" />
+            </div>
+            <div className="murdocImage">
+              <img src={murdocImage} alt="gorillaz" />
+            </div>
           </div>
+
         </section>
         :
         <section>
+          <div className="jeep">
+            <img src={jeep} alt="gorillaz" />
+          </div>
           <div className="band-image-container">
             <img src={bandLoadingImage} alt="gorillaz" />
           </div>
@@ -61,9 +73,6 @@ function Home() {
   )
 }
 export default Home
-
-
-
 
 
 
