@@ -1,25 +1,63 @@
-
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import characterOne from '../../assets/2d.png'
+import bandLoadingImage from '../../assets/gorillaz-band.png'
+
 function Home() {
   const history = useHistory()
-  const homeBtn = () => {
-    history.push('/trackshow')
+  const [enteredSite, setEnteredSite] = React.useState(false)
+
+  const clicksEnter = () => {
+    setEnteredSite(true)
+
+
+
+
+    //* This then sends the user to the TRACK SHOW page:
+    setTimeout(() => {
+      history.push('/trackshow')
+    }, 4000)
   }
+
+
+
+
   return (
-    <body className="home-page">
-      <section className="hero is-fullheight">
-        <div className="hero-body">
-          <div className="container">
-            <img src="https://preview.redd.it/ufq2moe3zhz11.png?width=2024&format=png&auto=webp&s=74460feb542c2e3861cfc11a2213cf9cc3ab2b3b"></img>
-            <div className="has-text-centered">
-              <button className="button is-primary is-light is-large is-rounded is-outlined" onClick={homeBtn}><span>Click to play</span></button>
+    <main className="home-page">
+
+      {!enteredSite ?
+        <section>
+          <div className="gorillaz-logo-container">
+            <div className="gorillaz-logo">
+              <img src="https://preview.redd.it/ufq2moe3zhz11.png?width=2024&format=png&auto=webp&s=74460feb542c2e3861cfc11a2213cf9cc3ab2b3b"></img>
+              <div className="has-text-centered">
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <audio id="audio"></audio>
-    </body>
+          <div className="welcome is-family-code is-size-3">
+            Welcome to GORILLAZAPP. Ready for some GORILLAZ?
+          </div>
+          <div className="enter">
+            <button
+              className="button is-primary is-light is-large is-outlined"
+              onClick={clicksEnter}>
+              <span>Enter</span>
+            </button>
+          </div>
+          <div className="characterOne">
+            <img src={characterOne} alt="gorillaz" />
+          </div>
+        </section>
+        :
+        <section>
+          <div className="band-image-container">
+            <img src={bandLoadingImage} alt="gorillaz" />
+          </div>
+          <div className="generating is-family-code is-size-3"> Generating tracks... </div>
+        </section>
+      }
+
+    </main>
   )
 }
 export default Home
@@ -53,3 +91,15 @@ export default Home
 // }
 
 // export default Home
+
+// SPINNER 
+
+// <div>
+// <Loader
+//   type="Puff"
+//   color="rgb(221, 102, 149)"
+//   height={50}
+//   width={50}
+//   timeout={30000}
+// />
+// </div>

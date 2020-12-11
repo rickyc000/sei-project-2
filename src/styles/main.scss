@@ -6,84 +6,124 @@
     url("../assets/fonts/gorillaz_1.woff") format("woff"),
     url("../assets/fonts/gorillaz_1.otf") format("opentype");
 }
-
-// To make sure the text stays black after clicking:
-* {
-  box-sizing: border-box;
-  color: black;
+figure {
+  width: 400px;
+  height: 400px;
+}
+.home-page, .trackshow-page {
+  background: linear-gradient(120deg, #00d1b2, #ffffff);
+}
+.trackshow-page {
+  background-image: url("https://preview.redd.it/ufq2moe3zhz11.png?width=2024&format=png&auto=webp&s=74460feb542c2e3861cfc11a2213cf9cc3ab2b3b")
+}
+.audio-player {
+  background-color: white;
+}
+.gorillaz-logo {
+  max-height: 400px;
+  max-width: 600px;
+}
+span {
+  font-family: 'Gorillaz';
+  font-size: 30px;
 }
 
-// Colour variants:
-$colour1: #ffbbbb;
-$colour2: #c9cdff;
-$colour3: #5C5D8D;
+// RICKY NEW CODE SINCE 10PM 
 
-
-
-
-
-// Header Logo Styling (section > wrapper > img)
-
-.logo-section {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+main {
+  height: 100vh;
 }
 
-.logo-wrapper {
-  border: 7px solid black;
-  border-radius: 5px;
-  box-shadow: 0px 0px 15px $colour3;
-  margin: 15px;
-  background: radial-gradient($colour1, $colour2)
-}
+// GORILLAZ LOGO
 
-.logo-wrapper img {
-  width: 280px;
-  margin: 0px 7px;
-}
-
-
-
-
-
-
-
-// Enter Button Styling (section > wrapper > div with text in)
-
-.enter-section {
+.gorillaz-logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
 }
 
-.enter-wrapper {
-  border: 7px solid black;
-  border-radius: 5px;
-  box-shadow: 0px 0px 15px $colour3;
-  background: radial-gradient($colour2, $colour1);
+.gorillaz-logo {
+  margin: 90px;
+}
 
-  display: flex;
-  justify-content: center;
-  text-align: center;
-
-  margin: 15px;
-  height: 120px;
-
-  animation: shake 1.5s infinite;
+.gorillaz-logo img {
+  width: 800px;
 }
 
 .enter {
-  font-size: 75px;
-  font-family: 'Gorillaz';
-  padding: 5px;
-  margin: 0px 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 90px;
+  animation: shake 1.5s infinite;
 }
 
+.characterOne img {
+  height: 420px;
+  position: absolute;
+  right: 150px;
+  bottom: 0;
+  opacity: 1;
+  animation: fade 1.5s linear;
+}
+
+// Loading page
+
+.generating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.band-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+
+  padding: 60px 0 10px;
+}
+
+.band-image-container img {
+  height: 700px;
+  opacity: 1;
+  animation: fadeInOut 1.6s infinite;
+}
+
+// Welcome text:
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  // animation: fade 1.5s linear;
+}
+
+
+
+
+
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0.3 }
+  70% { opacity: 1 }
+  100% { opacity: 0.3 }
+}
 
 @keyframes shake {
   0% {transform: translate(0px, 0px);}
   50% {transform: translate(0px, 8px);}
   100% {transform: translate(0px, 0px);}
 }
+
+
+
+@import '~bulma/bulma.sass'
+
+
+
+

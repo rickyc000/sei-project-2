@@ -4,7 +4,7 @@ import { getTracks } from '../lib/api'
 import ReactAudioPlayer from 'react-audio-player'
 function TrackShow() {
   const [tracks, setTracks] = React.useState(null)
-  const [trackIndex, setTrackIndex] = React.useState(1)
+  const [trackIndex, setTrackIndex] = React.useState(Math.floor(Math.random() * 200))
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -41,7 +41,7 @@ function TrackShow() {
                 <h2 className="is-family-code">Album name: {currentCollectionName}</h2>
                 <ReactAudioPlayer className="audio-player"
                   src={currentAudioSource}
-                  autoPlay
+                  // autoPlay
                 />
               </div>
               <audio></audio>
