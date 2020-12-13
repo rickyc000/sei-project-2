@@ -5,7 +5,8 @@ import characterTwo from '../../assets/2d-image2.png'
 import murdocImage from '../../assets/murdoc.png'
 import jeep from '../../assets/jeep.png'
 
-
+import ReactAudioPlayer from 'react-audio-player'
+import laughingAudio from '../../assets/gorillaz-laugh.mp3'
 import bandLoadingImage from '../../assets/gorillaz-band.png'
 
 
@@ -21,10 +22,8 @@ function Home() {
       history.push('/trackshow')
     }, 6500)
   }
-
   return (
     <main className="home-page">
-
       {!enteredSite ?
         <section>
           <div className="gorillaz-logo-container">
@@ -39,7 +38,7 @@ function Home() {
           </div>
           <div className="enter">
             <button
-              className="button is-primary is-light is-large is-outlined"
+              // className=" is-primary is-light is-large is-outlined"
               onClick={clicksEnter}>
               <span>Enter</span>
             </button>
@@ -55,7 +54,6 @@ function Home() {
               <img src={murdocImage} alt="gorillaz" />
             </div>
           </div>
-
         </section>
         :
         <section>
@@ -66,49 +64,13 @@ function Home() {
             <img src={bandLoadingImage} alt="gorillaz" />
           </div>
           <div className="generating is-family-code is-size-3"> Generating tracks... </div>
+          <ReactAudioPlayer
+            src={laughingAudio}
+            autoPlay
+          />
         </section>
       }
-
     </main>
   )
 }
 export default Home
-
-
-
-
-
-
-
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-
-// function Home() {
-//   return (
-//     <section>
-//       <div className="enter-section">
-//         <Link to="trackshow">
-//           <div className="enter-wrapper">
-//             <div className="enter">
-//               Enter
-//             </div>
-//           </div>
-//         </Link>
-//       </div>
-//     </section>
-//   )
-// }
-
-// export default Home
-
-// SPINNER 
-
-// <div>
-// <Loader
-//   type="Puff"
-//   color="rgb(221, 102, 149)"
-//   height={50}
-//   width={50}
-//   timeout={30000}
-// />
-// </div>
