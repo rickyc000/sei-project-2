@@ -22,6 +22,7 @@ function Home() {
       history.push('/trackshow')
     }, 6500)
   }
+
   return (
     <main className="home-page">
       {!enteredSite ?

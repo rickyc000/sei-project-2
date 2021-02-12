@@ -2,10 +2,12 @@
 import React from 'react'
 import { getTracks } from '../lib/api'
 import ReactAudioPlayer from 'react-audio-player'
+
 function TrackShow() {
   const [tracks, setTracks] = React.useState(null)
   const [trackIndex, setTrackIndex] = React.useState(Math.floor(Math.random() * 199 + 1)
   )
+  
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -17,6 +19,7 @@ function TrackShow() {
     }
     getData()
   }, [])
+
   const currentTrackName = tracks && tracks.results[trackIndex].trackName
   const currentCollectionName = tracks && tracks.results[trackIndex].collectionName
   const currentArtwork = tracks && tracks.results[trackIndex].artworkUrl100.replace(/100x100/g, '600x600')
@@ -24,6 +27,7 @@ function TrackShow() {
   function nextTrack() {  
     setTrackIndex(Math.floor(Math.random() * 199 + 1))
   }
+
   return (
     <section className="trackshow-page">
       <section className="hero is-fullheight">
@@ -59,4 +63,5 @@ function TrackShow() {
     </section>
   )
 }
+
 export default TrackShow
