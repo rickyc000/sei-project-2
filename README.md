@@ -26,6 +26,7 @@ This was a pair-coded project completed as part of GA's Software Engineering Imm
 
 ## Deployed Version
 https://gorillazapp.netlify.app/
+
 ![GorillazApp](src/assets/gorillazapp-screen-rec.gif)
 
 ## Contributors
@@ -145,6 +146,7 @@ Below is one example of many CSS keyframe animations used:
 
 ### Wins
 
+* **Third-party APIs:** Successfully integrating an API into our project was an invaluable process because it highlighted what can be achieved with the tools we've learnt. I'm excited about the prospect of delving deeper into this world and the opportunities created by having accessing to vast streams of data.
 
 ### Key Learnings
 
@@ -154,8 +156,13 @@ Below is one example of many CSS keyframe animations used:
 
 ### Bugs
 
+* **Image loading:** If images are slow to load this can affect the CSS animation sequence and this is something I'd like to resolve moving forward.
+
 ### Future Improvements
 
+* **Functionality:** We'd initally discussed implementing an audio volume control and the ability to return to the previous track but these ideas were placed on hold due to time constraints. 
+
+* **Scope:**  
 
 ## Credits:
 * [iTunes Search API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
