@@ -162,8 +162,6 @@ Below is one example of many CSS keyframe animations used:
 
 * **Functionality:** We'd initally discussed implementing an audio volume control and the ability to return to the previous track but these ideas were placed on hold due to time constraints. 
 
-* **Scope:**  
-
 ## Credits:
 * [iTunes Search API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1)
 * Audio sample taken from 'Clint Eastwood' by Gorillaz
