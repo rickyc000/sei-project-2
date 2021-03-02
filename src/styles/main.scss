@@ -125,7 +125,8 @@ main {
 }
 
 .characterOne img {
-  height: 420px;
+  // height: 420px;
+  height: 43vh;
   position: absolute;
   right: 5%;
   bottom: 0;
@@ -134,7 +135,8 @@ main {
 }
 
 .characterTwo img {
-  height: 320px;
+  // height: 320px;
+  height: 30vh;
   position: absolute;
   right: 50%;
   bottom: 0;
@@ -143,7 +145,8 @@ main {
 }
 
 .murdocImage img {
-  height: 520px;
+  // height: 520px;
+  height: 50vh;
   position: absolute;
   left: 2%;
   bottom: 0;
@@ -152,13 +155,12 @@ main {
 }
 
 
-
-
 // Loading page:
 .generating {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #EF5A96;
 }
 
 .band-image-container {
@@ -189,6 +191,9 @@ main {
   align-items: center;
   text-align: center;
   margin: 10px;
+  z-index: 1;
+  position: relative;
+  color: #EF5A96;
 }
 
 @keyframes fade {

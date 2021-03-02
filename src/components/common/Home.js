@@ -1,13 +1,13 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import characterOne from '../../assets/2d.png'
-import characterTwo from '../../assets/2d-image2.png'
-import murdocImage from '../../assets/murdoc.png'
-import jeep from '../../assets/jeep.png'
+import characterOne from '../../assets/compressed/2d.png'
+import characterTwo from '../../assets/compressed/2d-image2.png'
+import murdocImage from '../../assets/compressed/murdoc.png'
+import jeep from '../../assets/compressed/jeep.png'
 
 import ReactAudioPlayer from 'react-audio-player'
 import laughingAudio from '../../assets/gorillaz-laugh.mp3'
-import bandLoadingImage from '../../assets/gorillaz-band.png'
+import bandLoadingImage from '../../assets/compressed/gorillaz-band.png'
 
 
 function Home() {
